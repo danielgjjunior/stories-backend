@@ -1,0 +1,110 @@
+{
+    "resources": [
+      {
+        "id": "req-listar-prompts",
+        "parentId": null,
+        "name": "Listar Prompts de uma História",
+        "description": "",
+        "method": "GET",
+        "url": "http://localhost:3000/prompts/1",
+        "parameters": [],
+        "headers": [],
+        "body": {},
+        "response": []
+      },
+      {
+        "id": "req-enviar-interacao",
+        "parentId": null,
+        "name": "Enviar Interação",
+        "description": "",
+        "method": "POST",
+        "url": "http://localhost:3000/interacao",
+        "parameters": [],
+        "headers": [
+          {
+            "id": "hdr-authorization",
+            "parentId": "req-enviar-interacao",
+            "name": "Authorization",
+            "value": "Bearer SUA_CHAVE_DE_API_OPENAI",
+            "enabled": true
+          },
+          {
+            "id": "hdr-content-type",
+            "parentId": "req-enviar-interacao",
+            "name": "Content-Type",
+            "value": "application/json",
+            "enabled": true
+          }
+        ],
+        "body": {
+          "id": "bdy-enviar-interacao",
+          "parentId": "req-enviar-interacao",
+          "contentType": "application/json",
+          "data": "{\n  \"id_historia\": 1,\n  \"respostaUsuario\": \"Estava com muito medo, senti que estava prestes a afogar no meio da tempestade.\"\n}",
+          "enabled": true
+        },
+        "response": []
+      },
+      {
+        "id": "req-cadastrar-historia",
+        "parentId": null,
+        "name": "Cadastrar Nova História",
+        "description": "",
+        "method": "POST",
+        "url": "http://localhost:3000/historias",
+        "parameters": [],
+        "headers": [],
+        "body": {
+          "id": "bdy-cadastrar-historia",
+          "parentId": "req-cadastrar-historia",
+          "contentType": "application/json",
+          "data": "{\n  \"user_id\": 1,\n  \"title\": \"Minha Nova História\"\n}",
+          "enabled": true
+        },
+        "response": []
+      },
+      {
+        "id": "req-listar-historias",
+        "parentId": null,
+        "name": "Listar Todas as Histórias",
+        "description": "",
+        "method": "GET",
+        "url": "http://localhost:3000/historias",
+        "parameters": [],
+        "headers": [],
+        "body": {},
+        "response": []
+      },
+      {
+        "id": "req-cadastrar-prompt",
+        "parentId": null,
+        "name": "Cadastrar Novo Prompt",
+        "description": "",
+        "method": "POST",
+        "url": "http://localhost:3000/prompts",
+        "parameters": [],
+        "headers": [],
+        "body": {
+          "id": "bdy-cadastrar-prompt",
+          "parentId": "req-cadastrar-prompt",
+          "contentType": "application/json",
+          "data": "{\n  \"id_historia\": 1,\n  \"prompt\": \"Continue a história...\",\n  \"options\": null\n}",
+          "enabled": true
+        },
+        "response": []
+      },
+      {
+        "id": "req-listar-prompts-todos",
+        "parentId": null,
+        "name": "Listar Todos os Prompts",
+        "description": "",
+        "method": "GET",
+        "url": "http://localhost:3000/prompts",
+        "parameters": [],
+        "headers": [],
+        "body": {},
+        "response": []
+      }
+    ]
+  }
+  

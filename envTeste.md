@@ -1,0 +1,3 @@
+DATABASE_URL="mysql://root:@localhost:3306/stories"
+OPENAI_API_URL=SuaURLDaAPI
+OPENAI_API_KEY=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
